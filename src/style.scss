@@ -1,0 +1,404 @@
+$yellowish : #dcda6e;
+
+.app{
+    display: flex;
+    justify-content: center;
+    background-color: lightgrey;
+    .container{
+        width: 1024px;
+
+        .link{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        //Login & Register 
+        .auth{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: $yellowish;
+        }
+
+        h1{
+            font-size: 20px;
+            color: navy;
+            margin-bottom: 20px;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            padding: 50px;
+            background-color: white;
+            width: 200px;
+            gap: 20px;
+
+            input{
+                padding: 10px;
+                border: none;
+                border-bottom: 1px solid gray;
+            }
+
+            button{
+                padding: 10px;
+                border: none;
+                background-color: navy;
+                cursor: pointer;
+                color: white;
+            }
+
+            p{
+                font-size: 12px;
+                color: navy;
+                text-align: center;
+            }
+
+            span{
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+
+        //Navbar
+        .navbar{
+            .container{
+                padding: 10px 0px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .logo{
+                    img{
+                        width: 120px;
+                    }
+                }
+                span{
+                    font-weight: 600;
+                }
+                .links{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    h6{
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+
+                    span{
+                        cursor: pointer;
+                    }
+
+                    .write{
+                        background-color: $yellowish;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: 300;
+                        border: 1px solid white;
+
+                        &:hover{
+                            color: navy;
+                            background-color: white;
+                            border: 1px solid navy;
+                        }
+                    }
+                }
+            }
+        }
+
+        //Footer
+        footer{
+            margin-top: 100px;
+            padding: 20px;
+            background-color: $yellowish;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 12px;
+
+            img{
+                height: 50px;
+            }
+        }
+
+        //Home
+        .home{
+            .posts{
+                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+                gap: 150px;
+
+                .post{
+                    display: flex;
+                    gap: 100px;
+
+                    &:nth-child(2n+1){
+                        flex-direction: row-reverse;
+                    }
+
+                    .img{
+                        flex: 2;
+                        position: relative;
+/*
+                        &::after{
+                            content: "";
+                            width: 100%;
+                            height: 100%;
+                            background-color: $yellowish;
+                            position: absolute;
+                            top: 20px;
+                            left: -20px;
+                            z-index: -1;
+                        }
+*/                        
+                        img{
+                            width: 100%;
+                            max-height: 400px;
+                            object-fit: cover;
+
+                        }
+                    }
+
+                    .content{
+                        flex: 3;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        h1{
+                            font-size: 48px;
+                            color: black;
+                            margin: 0%;
+                        }
+
+                        p{
+                            font-size: 18px;
+                            margin: 0%;
+                        }
+
+                        button{
+                            width: max-content;
+                            padding: 10px 20px;
+                            border: none;
+                            cursor: pointer;
+                            background-color: white;
+                            border: 1px solid navy;
+                            color: navy;
+
+                            &:hover{
+                                border: 1px solid white;
+                                background-color: $yellowish;
+                                color: black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //Single Page
+        .single{
+            display: flex;
+            gap: 50px;
+
+            .content{
+                flex: 5;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                img{
+                    width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                }
+                .user{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 14px;
+
+                    img{
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+
+                    span{
+                        font-weight: bold;
+                    }
+                    p{
+                        margin: 0;
+                    }
+
+                
+                }
+
+                h1{
+                    color: #333;
+                    margin:0%;
+                    font-size: 42px;
+                }
+                p{
+                    text-align: justify;
+                    line-height: 30px;
+                    margin: 0%;
+                }
+
+                .edit{
+                    display: flex;
+                    gap: 5px;
+
+                    img{
+                        width: 20px;
+                        height: 20px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .menu{
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+
+                h1{
+                    font-size: 20px;
+                    color: #555;
+                    margin: 0%;
+                }
+
+                .post{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    img{
+                        width: 100%;
+                        height: 200px;
+                        object-fit: cover;
+                    }
+
+                    h2{
+                        color: #555;
+                        margin: 0%;
+                    }
+
+                    button{
+                        width: max-content;
+                        padding: 7.5px 15px;
+                        border: none;
+                        cursor: pointer;
+                        background-color: white;
+                        border: 1px solid navy;
+                        color: navy;
+
+                        &:hover{
+                            border: 1px solid white;
+                            background-color: $yellowish;
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+
+        //Write page
+        .add{
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+
+            .content{
+                flex: 5;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                input{
+                    padding: 10px;
+                    border: 1px solid lightgray;
+                }
+
+                .editorContainer{
+                    height: 300px;
+                    overflow: scroll;
+                    border: 1px solid lightgray;
+
+                    .editor{
+                        height: 100%;
+                        border: none;
+                        background-color: white;
+                    }
+                }
+            }
+
+            .menu{
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .item{
+                    border: 1px solid lightgray;
+                    padding: 10px;
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    font-size: 12px;
+                    color: #555;
+
+                    h1{
+                        margin: 0%;
+                        color: #555;
+                        margin-bottom: 3px;
+                        font-size: 20px;
+                    }
+
+                    .file{
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+
+                    .buttons{
+                        display: flex;
+                        justify-content: space-between;
+
+                        :first-child{
+                            cursor: pointer;
+                            color: navy;
+                            background-color: white;
+                            border: 1px solid navy;
+                            padding: 3px 5px;
+                        }
+
+                        :last-child{
+                            cursor: pointer;
+                            color: white;
+                            background-color: navy;
+                            border: 1px solid navy;
+                            padding: 3px 5px;
+                        }
+                    }
+
+                    .cat{
+                        display: flex;
+                        align-items: center;
+                        gap: 2px;
+                        color: navy;
+                    }
+                }
+            }
+        }
+    }
+}
